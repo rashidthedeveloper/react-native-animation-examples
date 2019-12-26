@@ -7,7 +7,7 @@ export default class FadeIn extends Component {
     this.state = {
       startValue: new Animated.Value(1),
       endValue: 0,
-      duration: 8000,
+      duration: 5000,
     };
   }
 
@@ -15,6 +15,7 @@ export default class FadeIn extends Component {
     Animated.timing(this.state.startValue, {
       toValue: this.state.endValue,
       duration: this.state.duration,
+      useNativeDriver: true,
     }).start();
   }
 

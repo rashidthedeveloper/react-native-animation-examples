@@ -16,6 +16,14 @@ export default class Home extends Component {
           onPress={() => navigate('FadeOptions')}
           text="Fade Animations"
         />
+        <Button
+          onPress={() => navigate('ScaleOptions')}
+          text="Scaling Animations"
+        />
+        <Button
+          onPress={() => navigate('MoveOptions')}
+          text="Moving Animations"
+        />
       </View>
     );
   }

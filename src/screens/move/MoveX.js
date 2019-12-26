@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import {View, Animated, StyleSheet} from 'react-native';
 
-export default class FadeIn extends Component {
+export default class MoveX extends Component {
   constructor(props) {
     super(props);
     this.state = {
       startValue: new Animated.Value(0),
-      endValue: 1,
+      endValue: 150,
       duration: 5000,
+      useNativeDriver: true,
     };
   }
 
@@ -15,7 +16,6 @@ export default class FadeIn extends Component {
     Animated.timing(this.state.startValue, {
       toValue: this.state.endValue,
       duration: this.state.duration,
-      useNativeDriver: true,
     }).start();
   }
 
@@ -23,21 +23,27 @@ export default class FadeIn extends Component {
     return (
       <View style={styles.container}>
         <Animated.View
-          style={[styles.square, {opacity: this.state.startValue}]}
+          style={[
+            styles.square,
+            {
+              translateX: this.state.startValue,
+            },
+          ]}
         />
       </View>
     );
   }
 }
+
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    flex: 1,
   },
   square: {
-    height: 150,
-    width: 150,
+    height: 50,
+    width: 50,
     backgroundColor: 'green',
   },
 });
