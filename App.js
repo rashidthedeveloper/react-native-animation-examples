@@ -15,6 +15,9 @@ import MoveY from './src/screens/move/MoveY';
 import MoveXY from './src/screens/move/MoveXY';
 import Interpolation from './src/screens/interpolation/Interpolation';
 import Spring from './src/screens/spring/Spring';
+import MultipleAnimation from './src/screens/multiple/MultipleAnimation';
+import Sequence from './src/screens/multiple/Sequence';
+import Parallel from './src/screens/multiple/Parallel';
 
 const AppNavigator = createStackNavigator({
   Home,
@@ -31,6 +34,9 @@ const AppNavigator = createStackNavigator({
   MoveXY,
   Interpolation,
   Spring,
+  MultipleAnimation,
+  Sequence,
+  Parallel,
 });
 
 const Navigation = createAppContainer(AppNavigator);
