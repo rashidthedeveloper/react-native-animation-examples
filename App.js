@@ -13,6 +13,8 @@ import MoveOptions from './src/screens/move/MoveOptions';
 import MoveX from './src/screens/move/MoveX';
 import MoveY from './src/screens/move/MoveY';
 import MoveXY from './src/screens/move/MoveXY';
+import Interpolation from './src/screens/interpolation/Interpolation';
+import Spring from './src/screens/spring/Spring';
 
 const AppNavigator = createStackNavigator({
   Home,
@@ -27,6 +29,8 @@ const AppNavigator = createStackNavigator({
   MoveX,
   MoveY,
   MoveXY,
+  Interpolation,
+  Spring,
 });
 
 const Navigation = createAppContainer(AppNavigator);

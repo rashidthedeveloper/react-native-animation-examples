@@ -24,6 +24,11 @@ export default class Home extends Component {
           onPress={() => navigate('MoveOptions')}
           text="Moving Animations"
         />
+        <Button
+          onPress={() => navigate('Interpolation')}
+          text="Interpolation"
+        />
+        <Button onPress={() => navigate('Spring')} text="Spring Animation" />
       </View>
     );
   }
