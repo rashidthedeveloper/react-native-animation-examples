@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Animated, StyleSheet} from 'react-native';
 
-export default class Sequence extends Component {
+export default class Delay extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,6 +20,7 @@ export default class Sequence extends Component {
         duration: this.state.duration,
         useNativeDriver: true,
       }),
+      Animated.delay(1000),
       Animated.timing(this.state.initialOpacity, {
         toValue: this.state.endOpacity,
         duration: this.state.duration,

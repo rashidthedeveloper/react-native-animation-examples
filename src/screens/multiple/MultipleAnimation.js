@@ -14,6 +14,8 @@ export default class MultipleAnimation extends Component {
       <View style={styles.container}>
         <Button onPress={() => navigate('Sequence')} text="Sequence" />
         <Button onPress={() => navigate('Parallel')} text="Parallel" />
+        <Button onPress={() => navigate('Delay')} text="Delay" />
+        <Button onPress={() => navigate('Stagger')} text="Stagger" />
       </View>
     );
   }

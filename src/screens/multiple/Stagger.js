@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {View, Animated, StyleSheet} from 'react-native';
 
-export default class Sequence extends Component {
+export default class Delay extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -9,12 +9,12 @@ export default class Sequence extends Component {
       initialMove: new Animated.Value(0),
       endOpacity: 0,
       endMove: 100,
-      duration: 3000,
+      duration: 5000,
     };
   }
 
   componentDidMount() {
-    Animated.sequence([
+    Animated.stagger(1000, [
       Animated.timing(this.state.initialMove, {
         toValue: this.state.endMove,
         duration: this.state.duration,

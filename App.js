@@ -18,6 +18,8 @@ import Spring from './src/screens/spring/Spring';
 import MultipleAnimation from './src/screens/multiple/MultipleAnimation';
 import Sequence from './src/screens/multiple/Sequence';
 import Parallel from './src/screens/multiple/Parallel';
+import Delay from './src/screens/multiple/Delay';
+import Stagger from './src/screens/multiple/Stagger';
 
 const AppNavigator = createStackNavigator({
   Home,
@@ -37,6 +39,8 @@ const AppNavigator = createStackNavigator({
   MultipleAnimation,
   Sequence,
   Parallel,
+  Delay,
+  Stagger,
 });
 
 const Navigation = createAppContainer(AppNavigator);
