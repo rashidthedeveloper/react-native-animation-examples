@@ -38,6 +38,10 @@ export default class Home extends Component {
           onPress={() => navigate('StartStop')}
           text="Start&Stop Animations"
         />
+        <Button
+          onPress={() => navigate('AdvancedOptions')}
+          text="Advanced Animations"
+        />
       </View>
     );
   }

@@ -22,6 +22,9 @@ import Delay from './src/screens/multiple/Delay';
 import Stagger from './src/screens/multiple/Stagger';
 import Loop from './src/screens/loop/Loop';
 import StartStop from './src/screens/startstop/StartStop';
+import AdvancedOptions from './src/screens/advanced/AdvancedOptions';
+import Drag from './src/screens/advanced/Drag';
+import DragDrop from './src/screens/advanced/DragDrop';
 
 const AppNavigator = createStackNavigator({
   Home,
@@ -45,6 +48,9 @@ const AppNavigator = createStackNavigator({
   Stagger,
   Loop,
   StartStop,
+  AdvancedOptions,
+  Drag,
+  DragDrop,
 });
 
 const Navigation = createAppContainer(AppNavigator);
