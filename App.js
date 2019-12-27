@@ -20,6 +20,8 @@ import Sequence from './src/screens/multiple/Sequence';
 import Parallel from './src/screens/multiple/Parallel';
 import Delay from './src/screens/multiple/Delay';
 import Stagger from './src/screens/multiple/Stagger';
+import Loop from './src/screens/loop/Loop';
+import StartStop from './src/screens/startstop/StartStop';
 
 const AppNavigator = createStackNavigator({
   Home,
@@ -41,6 +43,8 @@ const AppNavigator = createStackNavigator({
   Parallel,
   Delay,
   Stagger,
+  Loop,
+  StartStop,
 });
 
 const Navigation = createAppContainer(AppNavigator);

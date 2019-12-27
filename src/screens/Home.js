@@ -33,6 +33,11 @@ export default class Home extends Component {
           onPress={() => navigate('MultipleAnimation')}
           text="Multiple Animations"
         />
+        <Button onPress={() => navigate('Loop')} text="Looping Animations" />
+        <Button
+          onPress={() => navigate('StartStop')}
+          text="Start&Stop Animations"
+        />
       </View>
     );
   }
