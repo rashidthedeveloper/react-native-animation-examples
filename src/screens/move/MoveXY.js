@@ -5,10 +5,9 @@ export default class MoveXY extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startValue: new Animated.Value(0),
+      startValue: new Animated.ValueXY(0, 0),
       endValue: 150,
       duration: 5000,
-      useNativeDriver: true,
     };
   }
 
@@ -16,6 +15,7 @@ export default class MoveXY extends Component {
     Animated.timing(this.state.startValue, {
       toValue: this.state.endValue,
       duration: this.state.duration,
+      useNativeDriver: true,
     }).start();
   }
 
@@ -26,8 +26,12 @@ export default class MoveXY extends Component {
           style={[
             styles.square,
             {
-              translateX: this.state.startValue,
-              translateY: this.state.startValue,
+              transform: [
+                {
+                  translateX: this.state.startValue.x,
+                  translateY: this.state.startValue.y,
+                },
+              ],
             },
           ]}
         />
