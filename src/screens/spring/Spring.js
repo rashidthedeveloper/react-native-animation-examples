@@ -7,8 +7,6 @@ export default class Spring extends Component {
     this.state = {
       startValue: new Animated.Value(1),
       endValue: 1.5,
-      duration: 5000,
-      useNativeDriver: true,
     };
   }
 

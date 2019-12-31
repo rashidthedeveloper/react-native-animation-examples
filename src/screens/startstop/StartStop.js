@@ -8,7 +8,6 @@ export default class MoveY extends Component {
       startValue: new Animated.Value(0),
       endValue: 150,
       duration: 8000,
-      useNativeDriver: true,
     };
   }
 
@@ -16,6 +15,7 @@ export default class MoveY extends Component {
     Animated.timing(this.state.startValue, {
       toValue: this.state.endValue,
       duration: this.state.duration,
+      useNativeDriver: true,
     }).start();
     setTimeout(() => {
       Animated.timing(this.state.startValue).stop();

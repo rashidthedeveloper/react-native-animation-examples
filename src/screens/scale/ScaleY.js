@@ -8,7 +8,6 @@ export default class ScaleXY extends Component {
       startValue: new Animated.Value(1),
       endValue: 2,
       duration: 5000,
-      useNativeDriver: true,
     };
   }
 
@@ -16,6 +15,7 @@ export default class ScaleXY extends Component {
     Animated.timing(this.state.startValue, {
       toValue: this.state.endValue,
       duration: this.state.duration,
+      useNativeDriver: true,
     }).start();
   }
 
